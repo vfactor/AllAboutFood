@@ -1,0 +1,20 @@
+<h1>Restaurant</h1>
+
+<p>This component demonstrates fetching data from the server.</p>
+
+<p *ngIf="!restaurants"><em>Loading...</em></p>
+
+<table class='table' *ngIf="restaurants">
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Name</th>      
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let r of restaurants">
+      <td>{{ r.Id }}</td>
+      <td>{{ r.Name }}</td>     
+    </tr>
+  </tbody>
+</table>
